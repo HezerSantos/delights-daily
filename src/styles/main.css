@@ -1,0 +1,509 @@
+@font-face {
+    font-family: fancy;
+    src: url(../../assets/fonts/StyleScript-Regular.ttf);
+}
+@font-face {
+    font-family: main;
+    src: url(../../assets/fonts/Rubik-Regular.ttf);
+}
+
+*{
+    font-family: main;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+button{
+    cursor: pointer;
+}
+
+#indexHeader{
+    width: 100%;
+    height: 75vh;
+}
+
+nav{
+    position: relative;
+    width: 100%;
+    height: 10vh;
+    background-color: rgb(53, 145, 53);
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(20%, 1fr));
+}
+
+nav h1{
+    grid-column: 1 / 2;
+    font-size: 2rem;
+    font-family: fancy;
+    color: white;
+    letter-spacing: .5rem;
+    justify-self: center;
+    align-self: center;
+}
+
+.searchBar{
+    grid-column: 2 / 4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.searchInput{
+    width: 80%;
+    height: 50%;
+    border: none;
+}
+
+.searchInput:focus{
+    outline: none;
+}
+
+.searchButton{
+    height: 50%;
+    border: 2px solid rgb(25, 88, 30);
+    background-color: rgb(25, 88, 30);
+    color: white;
+    width: 10%;
+}
+
+.linkContainer{
+    grid-column: 4 / 6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    gap: 5%;
+}
+
+.linkContainer a{
+    font-size: 1rem;
+    text-decoration: none;
+    color: white;
+}
+
+.subLinkCont, .subLinkContSI{
+    height: 10vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.linkContainer button{
+    width: 100%;
+    color: white;
+    background-color: transparent;
+    border: none;
+    font-size: 1rem;
+    padding: 0;
+    text-align: left;
+}
+
+.links{
+    z-index: -1;
+    opacity: 0;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20% 0 20% 0;
+    gap: 1.5vh;
+    width: 10vw;
+    background-color: rgb(25, 88, 30);
+    top: 100%;
+}
+
+.links a{
+    padding: 1rem;
+}
+
+.links a:hover{
+    width: 100%;
+    background-color: rgb(53, 145, 53);
+}
+
+
+.line, .signInLine{
+    width: 0;
+    height: 0;
+    background-color: transparent;
+}
+
+.homeButton{
+    border: 2px solid rgb(25, 88, 30);
+    padding: 1rem;
+}
+
+.homeButton:hover{
+    background-color: rgb(25, 88, 30);
+}
+
+.rod{
+    position: relative;
+    width: 100%;
+    height: 65vh;
+    background: url(../../images/rod.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    box-shadow: 0 8px 5px gray;
+    display: grid;
+    grid: repeat(auto-fill, minmax(25%, 1fr)) / repeat(auto-fill, minmax(25%, 1fr));
+}
+
+.rod::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: black;
+    opacity: 60%;
+}
+
+.rod > *{
+    z-index: 1;
+}
+
+.rod h1{
+    grid-column: 1 / 5;
+    align-self: center;
+    justify-self: center;
+    color: white;
+    font-size: 5rem;
+    font-family: fancy;
+    letter-spacing: 1rem;
+}
+
+.rod button{
+    grid-area: 2 / 3 / 4 / 4;
+    width: 45%;
+    height: 25%;
+    justify-self: center;
+    align-self: center;
+    background-color: transparent;
+    border: 2px solid white;
+    color: white;
+    font-size: 1.5rem;
+}
+
+.rod button:hover{
+    background-color: rgb(53, 145, 53);
+}
+
+.rod article{
+    position: relative;
+    padding: 5%;
+    grid-area: 2 / 2 / 4 / 3;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 5%;
+}
+
+
+
+.rod article::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: rgb(53, 145, 53);
+    z-index: -1;
+    opacity: 75%;
+    filter: blur(3rem);
+}
+
+#indexMain{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5% 10% 0 10%;
+    gap: 5%;
+}
+
+.featuredRecipes{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(50%, 1fr));
+}
+
+.recipeTile{
+    width: 65%;
+    height: 85%;
+}
+
+#rone{
+    background: url(../../images/r1.jpg);
+    justify-self: center;
+    align-self: center;
+}
+#rtwo{
+    background: url(../../images/r2.jpg);
+    justify-self: center;
+    align-self: center;
+}
+
+#rone, #rtwo{
+    position: relative;
+    background-position: 65%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 50px;
+    border: .3rem solid  rgb(25, 88, 30);
+    transition: border 0.1s ease-in-out;
+}
+
+#rone::after, #rtwo::after{
+    position: absolute;
+    content: '';
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: black;
+    opacity: 20%;
+    box-shadow: none;
+    border-radius: 50px;
+    transition: box-shadow 0.1s ease-in-out, border 0.1s ease-in-out, opacity 0.1s ease-in-out;
+}
+
+#rone:hover, #rtwo:hover{
+    border: none;
+}
+#rone:hover::after, #rtwo:hover::after{
+    opacity: 50%;
+    box-shadow: 15px 8px 2px black;
+    transition: box-shadow 0.1s ease-in-out, border 0.1s ease-in-out, opacity 0.1s ease-in-out;
+}
+
+.recipeInfo{
+    width: 100%;
+    height: 100%;
+    padding: 10%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    z-index: 2;
+    opacity: 0;
+    color: white;
+    transition: opacity .1s ease-in-out;
+}
+
+.recipeInfo button{
+    color: white;
+    width: 25%;
+    height: 10%;
+    border: .2rem solid rgb(25, 88, 30);
+    background-color: transparent;
+}
+
+.recipeInfo button:hover{
+    background-color: rgb(53, 145, 53);
+}
+
+#rone:hover > *, #rtwo:hover > *{
+    opacity: 1;
+    transition: opacity .1s ease-in-out;
+}
+
+footer{
+    width: 100%;
+    height: 10vh;
+    background-color: rgb(53, 145, 53);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.5rem;
+}
+
+footer > *{
+    font-family: fancy;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 1400px){
+    nav h1{
+        font-size: 1rem;
+    }
+    .linkContainer a{
+        font-size: .8rem;
+    }
+    .linkContainer button{
+        font-size: .8rem;
+    }
+    .homeButton{
+        padding: .8rem;
+    }
+    .links a{
+        font-size: .8rem;
+    }
+    .searchButton{
+        font-size: .8rem;
+    }
+
+}
+
+@media screen and (max-width: 1200px){
+    nav h1{
+        font-size: .6rem;
+    }
+    .linkContainer a{
+        font-size: .7rem;
+    }
+    .linkContainer button{
+        font-size: .7rem;
+    }
+    .links a{
+        font-size: .7rem;
+    }
+    .searchButton{
+        font-size: .7rem;
+    }
+    .homeButton{
+        padding: .7rem;
+    }
+
+    .rod h1{
+        font-size: 3rem;
+    }
+    .rod button{
+        font-size: 1.2rem;
+    }
+    .rod article{
+        font-size: .8rem;
+    }
+
+}
+
+@media screen and (max-width: 1000px){
+    nav h1{
+        font-size: 1.5rem;
+        letter-spacing: normal;
+    }
+    .linkContainer a{
+        font-size: .5rem;
+    }
+    .linkContainer button{
+        font-size: .5rem;
+    }
+    .searchButton{
+        font-size: .5rem;
+    }
+    .homeButton{
+        padding: .5rem;
+    }
+
+    .rod h1{
+        font-size: 3rem;
+    }
+    .rod button{
+        font-size: 1.2rem;
+    }
+    .rod article{
+        font-size: .8rem;
+    }
+
+}
+
+@media screen and (max-width: 800px){
+    nav h1{
+        font-size: 1.5rem;
+        letter-spacing: normal;
+    }
+    .linkContainer a{
+        font-size: .4rem;
+    }
+    .linkContainer button{
+        font-size: .4rem;
+    }
+    .searchButton{
+        font-size: .4rem;
+    }
+    .homeButton{
+        padding: .4rem;
+    }
+
+    .rod h1{
+        font-size: 2rem;
+    }
+    .rod button{
+        font-size: 1rem;
+    }
+    .rod article{
+        font-size: .7rem;
+    }
+
+}
+
+@media screen and (max-width: 500px){
+    nav h1{
+        font-size: .5rem;
+        letter-spacing: normal;
+    }
+    .linkContainer a{
+        font-size: .3rem;
+    }
+    .linkContainer button{
+        font-size: .3rem;
+    }
+    .links a{
+        font-size: .3rem;
+    }
+    .searchButton{
+        font-size: .3rem;
+    }
+    .homeButton{
+        padding: .3rem;
+    }
+
+    .rod h1{
+        font-size: 1.5rem;
+    }
+    .rod button{
+        font-size: .7rem;
+    }
+    .rod article{
+        font-size: .5rem;
+    }
+}
+    

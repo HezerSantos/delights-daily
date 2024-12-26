@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/main.css">
+    <script defer src="../../js/main.js"></script>
+    <title>HOME | Delights Daily</title>
+</head>
+<body>
+    <header id="indexHeader">
+        <nav>
+            <h1>Delights Daily</h1>
+            <div class="searchBar">
+                <input type="text" class="searchInput" placeholder="search for delights">
+                <button class="searchButton">Go</button>
+            </div>
+            <div class="linkContainer">
+                <div class="subLinkCont">
+                    <button>Categories</button>
+                    <div class="line"></div>
+                    <div class="links">
+                        <a href="">Appetizers</a>
+                        <a href="">Salads</a>
+                        <a href="">Soups</a>
+                        <a href="">Desserts</a>
+                        <a href="">Breakfasts</a>
+                        <a href="">Drinks</a>
+                    </div>
+                </div>
+                <div class="subLinkCont">
+                    <button>Cooking Tips</button>
+                    <div class="line"></div>
+                    <div class="links">
+                        <a href="">Cooking Techniques</a>
+                        <a href="">Meal Prep</a>
+                        <a href="">Kitchen Tips</a>
+                        <a href="">Baking Tips</a>
+                        <a href="">Cooking for Kids</a>
+                    </div>
+                </div>
+                <div class="subLinkCont">
+                    <button>Socials</button>
+                    <div class="line"></div>
+                    <div class="links">
+                        <a href="">Instagram</a>
+                        <a href="">Facebook</a>
+                        <a href="">Tik Tok</a>
+                    </div>
+                </div>
+                <div class="subLinkContSI">
+                    <a href="" id="signIn">Sign In</a>
+                    <div class="signInLine"></div>
+                </div>
+                <a href="../homePage/index.html" class="homeButton">Back to Collection</a>
+            </div>
+        </nav>
+        <section class="rod">
+            <h1>Recipe of the Day!</h1>
+            <article>
+                <h2>Louisiana Style Gumbo</h2>
+                <p>A rich and hearty stew that embodies the vibrant flavors of Creole and Cajun cuisine. 
+                    Originating in Louisiana, this dish is renowned for its unique blend of ingredients, 
+                    including a dark roux made from flour and oil, which serves as a thickening agent and gives the gumbo its distinctive flavor.
+                </p>
+            </article>
+            <button id="rodButton">View Recipe</button>
+        </section> 
+    </header>
+
+    <main id="indexMain">
+        <h1>Featured Recipes</h1>
+        <section class="featuredRecipes">
+            <article class="recipeTile" id="rone">
+                <div class="recipeInfo">
+                    <h2>Austrian Goulash</h2>
+                    <p>Austrian Goulash is a hearty, flavorful stew traditionally made with tender beef or pork, onions, paprika, garlic, and a variety of spices. The dish is simmered slowly to develop deep, rich flavors, often served with rustic sides like dumplings or bread.</p>
+                    <p><strong>Difficulty:</strong> Moderate</p>
+                    <p><strong>Cooking Time:</strong> 130 minutes</p>
+                    <button id="rOneButton">View Recipe</button>
+                </div>
+            </article>
+            <article class="recipeTile" id="rtwo">
+                <div class="recipeInfo">
+                    <h2>Vegan Peanut Butter Chocolate Fudge</h2>
+                    <p>Vegan Peanut Butter Chocolate Fudge is a rich, creamy treat made without dairy or animal products. This decadent dessert combines the smoothness of peanut butter with the sweetness of chocolate, creating a perfect balance of flavors.</p>
+                    <p><strong>Difficulty:</strong> Easy</p>
+                    <p><strong>Cooking Time:</strong> 15 minutes</p>
+                    <button id="rTwoButton">View Recipe</button>
+                </div>
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        "Cooking is like love. It should be entered into with abandon or not at all." <span>— Harriet Van Horne</span>
+    </footer>
+
+
+
+    <script>
+        // Left this in this file because these attributes dont exist
+        // In the others so errors wont log in console
+        const rodButton = document.querySelector("#rodButton");
+        const rOneButton = document.querySelector("#rOneButton");
+        const rTwoButton = document.querySelector("#rTwoButton");
+
+        const recipeList = [rodButton, rOneButton, rTwoButton];
+
+        recipeList.forEach((button, index) => {
+            button.addEventListener('click', () => {
+                if (index === 0){
+                    window.location.href = '../recipePages/rod.html'
+                } else if (index === 1){
+                    window.location.href = '../recipePages/rone.html'
+                } else {
+                    window.location.href = '../recipePages/rtwo.html'
+                }
+            })
+        })
+
+    </script>
+</body>
+</html>
